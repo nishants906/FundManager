@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="first.com.fundmanger" >
+
+    <uses-permission android:name="com.android.alarm.permission.SET_ALARM"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".MainApp"
+            android:label="app_main" >
+        </activity>
+
+        <activity
+            android:name=".ResetMonth"
+            android:label="reset_month" >
+        </activity>
+        <activity
+            android:name=".Statistics"
+            android:label="activity_statistics" >
+        </activity>
+    </application>
+
+</manifest>
