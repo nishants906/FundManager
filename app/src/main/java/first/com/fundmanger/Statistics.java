@@ -3,7 +3,6 @@ package first.com.fundmanger;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
@@ -31,13 +30,9 @@ public class Statistics extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_statistics);
 
-        Typeface tf1 = Typeface.createFromAsset(getAssets(),"fonts/ralewaybold.ttf");
-        Typeface tf2 = Typeface.createFromAsset(getAssets(), "fonts/raleway.ttf");
 
         heading = (TextView) findViewById(R.id.heading5);
-        heading.setTypeface(tf1);
         subheading = (TextView) findViewById(R.id.subheading5);
-        subheading.setTypeface(tf2);
 
         DBHandler db = new DBHandler(getApplicationContext());
         monthly_expenditures = db.getMonthlyExpenditures();

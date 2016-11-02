@@ -24,9 +24,6 @@ public class SignIn extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.sign_in);
 
-
-
-
         create_new_profile = (TextView) findViewById(R.id.create_profile);
         cancel = (TextView) findViewById(R.id.cancel);
         log_in = (TextView) findViewById(R.id.login);

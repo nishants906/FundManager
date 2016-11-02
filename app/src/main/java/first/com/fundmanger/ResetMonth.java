@@ -35,12 +35,6 @@ public class ResetMonth extends AppCompatActivity {
         limit = (EditText) findViewById(R.id.limit);
 
 
-        Typeface tf1 = Typeface.createFromAsset(getAssets(),"fonts/ralewaybold.ttf");
-        Typeface tf2 = Typeface.createFromAsset(getAssets(), "fonts/raleway.ttf");
-
-        head.setTypeface(tf1);
-        subHead.setTypeface(tf2);
-
         start = (Button) findViewById(R.id.start);
 
         start.setOnClickListener(new View.OnClickListener() {

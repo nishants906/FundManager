@@ -128,7 +128,6 @@ public class Fragment2 extends Fragment {
                             ad.setTitle("Warning!!");
                             ad.setMessage("You have spent more than 80% of your total amount, be careful :)");
                             ad.setButton(getActivity().getString(R.string.ok), new DialogInterface.OnClickListener() {
-
                                 public void onClick(DialogInterface dialog, int which) {
                                     dialog.dismiss();
                                 }
