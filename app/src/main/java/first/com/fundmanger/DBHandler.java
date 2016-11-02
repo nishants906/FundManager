@@ -322,6 +322,7 @@ public class DBHandler extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getReadableDatabase();
 
         String Balance = new String();
+
         String query = "SELECT * FROM "+ TABLE_Final;
         Cursor cursor = db.rawQuery(query, null);
 

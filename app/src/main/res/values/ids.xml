@@ -3,4 +3,6 @@
     <item name="action_settings" type="id" />
     <item name="new_month" type="id" />
     <item name="view_stats" type="id" />
+    <item name="heading5" type="id" />
+    <item name="subheading5" type="id" />
 </resources>

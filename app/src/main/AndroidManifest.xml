@@ -23,14 +23,21 @@
             android:name=".MainApp"
             android:label="app_main" >
         </activity>
-
+        <activity
+            android:name=".CreateProfile"
+            android:label="create_profile" >
+        </activity>
         <activity
             android:name=".ResetMonth"
             android:label="reset_month" >
         </activity>
         <activity
+            android:name=".SignIn"
+            android:label="sign_in" >
+        </activity>
+        <activity
             android:name=".Statistics"
-            android:label="activity_statistics" >
+            android:label="statistics" >
         </activity>
     </application>
 

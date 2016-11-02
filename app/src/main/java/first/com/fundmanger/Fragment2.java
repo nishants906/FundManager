@@ -1,5 +1,6 @@
 package first.com.fundmanger;
 
+
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.res.ColorStateList;
@@ -25,7 +26,7 @@ public class Fragment2 extends Fragment {
     EditText debit ;
     FloatingActionButton debited;
     /*Button undo;*/
-    Float amount,balance;
+
     ListView list;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -39,12 +40,9 @@ public class Fragment2 extends Fragment {
         list = (ListView) v.findViewById(R.id.DebitList);
 
         final DBHandler db = new DBHandler(getActivity().getApplicationContext());
-        if (!db.getAmount().toString().matches("")) {
-             amount = Float.valueOf(db.getAmount());
-        }
-        if(!db.getBalance().toString().matches("")) {
-             balance = Float.valueOf(db.getBalance());
-        }
+        Float amount = Float.valueOf(db.getAmount());
+        Float balance = Float.valueOf(db.getBalance());
+
         if(balance<(0.2*amount)){
             AlertDialog ad = new AlertDialog.Builder(this.getActivity())
                     .create();
