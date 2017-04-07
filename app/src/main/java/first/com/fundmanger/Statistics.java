@@ -55,7 +55,7 @@ public class Statistics extends AppCompatActivity {
                     .create();
             ad.setCancelable(false);
             ad.setTitle("No Records!!");
-            ad.setMessage("You haven't completed any month yet... Complete a month to view Monthly Expenditures.");
+            ad.setMessage("You haven't completed any day yet... Complete a month to view daily Expenditures.");
             ad.setButton(this.getString(R.string.ok), new DialogInterface.OnClickListener() {
 
                 public void onClick(DialogInterface dialog, int which) {

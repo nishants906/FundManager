@@ -1,6 +1,8 @@
 package first.com.fundmanger;
 
 
+import android.app.AlarmManager;
+import android.app.PendingIntent;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -11,6 +13,8 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import java.util.Calendar;
 
 public class SignIn extends AppCompatActivity {
 
@@ -33,19 +37,25 @@ public class SignIn extends AppCompatActivity {
 
         username.setInputType(InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
 
+
+        Calendar calendar = Calendar.getInstance();
+        calendar.set(Calendar.HOUR_OF_DAY, 15);
+        calendar.set(Calendar.MINUTE, 15);
+        calendar.set(Calendar.SECOND, 0);
+
+        Intent notificationmassage = new Intent(getApplicationContext(),Notificationmassage.class);
+
+//This is alarm manager
+        PendingIntent pi = PendingIntent.getService(this, 0 , notificationmassage, PendingIntent.FLAG_UPDATE_CURRENT);
+        AlarmManager am = (AlarmManager) getSystemService(ALARM_SERVICE);
+        am.setRepeating(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(),
+                AlarmManager.INTERVAL_DAY, pi);
         create_new_profile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
                 Intent intent = new Intent(getApplicationContext(),CreateProfile.class);
                 startActivity(intent);
-                finish();
-            }
-        });
-        cancel.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                finish();
             }
         });
         log_in.setOnClickListener(new View.OnClickListener() {
@@ -73,8 +83,7 @@ public class SignIn extends AppCompatActivity {
                     if(Username.equals(actual_details[0][0]) && Password.equals(actual_details[1][0])){
                         Intent intent = new Intent(getApplicationContext(), MainApp.class);
                         startActivity(intent);
-                        finish();
-                    }
+                        }
                     else {
                         Toast.makeText(getApplicationContext(), "Invalid Username or Password", Toast.LENGTH_SHORT).show();
                     }
