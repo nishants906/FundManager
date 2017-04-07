@@ -118,7 +118,7 @@
             android:id="@+id/line"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#0ff"
+            android:background="@android:color/holo_blue_light"
 
             />
         <LinearLayout
@@ -141,7 +141,7 @@
                 android:layout_marginLeft="5dp"
                 android:layout_marginTop="5dp"
                 android:textSize="20dp"
-                android:background="#f0f"
+                android:background="#21769b"
                 android:gravity="center_horizontal|center_vertical"
                 android:layout_weight="1"
                 />
@@ -159,7 +159,7 @@
                 android:textColor="#ffffff"
                 android:layout_weight="1"
                 android:gravity="center_horizontal|center_vertical"
-                android:background="#f0f"/>
+                android:background="#0e5e81"/>
 
         </LinearLayout>
     </RelativeLayout>
