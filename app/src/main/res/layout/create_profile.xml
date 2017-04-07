@@ -3,7 +3,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-   android:background="@android:color/holo_blue_light">
+   android:background="@drawable/create"
+    android:backgroundTint="#cccbcb"
+    android:backgroundTintMode="multiply">
 
 
     <TextView
@@ -15,24 +17,17 @@
         android:id="@+id/heading"
         android:textSize="40dp"
         android:textStyle="bold"
-        android:layout_marginTop="35dp"/>
+        android:layout_marginTop="75dp"
 
-    <TextView
-        android:id="@+id/subheading"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Please enter your details"
-        android:gravity="center"
-        android:layout_marginTop="8dp"
-        android:layout_below="@+id/heading"
-        android:textColor="#ffffff"/>
+        />
+
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:background="#ffffff"
-        android:alpha="0.8"
+        android:background="#d8ffffff"
+        android:alpha="0.9"
         android:layout_marginRight="@dimen/activity_horizontal_margin"
         android:layout_marginLeft="@dimen/activity_horizontal_margin"
         android:layout_centerInParent="true"
@@ -114,13 +109,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true">
-        <TextView
-            android:id="@+id/line"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@android:color/holo_blue_light"
 
-            />
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -141,7 +130,7 @@
                 android:layout_marginLeft="5dp"
                 android:layout_marginTop="5dp"
                 android:textSize="20dp"
-                android:background="#21769b"
+                android:background="#c8227f86"
                 android:gravity="center_horizontal|center_vertical"
                 android:layout_weight="1"
                 />
@@ -159,7 +148,7 @@
                 android:textColor="#ffffff"
                 android:layout_weight="1"
                 android:gravity="center_horizontal|center_vertical"
-                android:background="#0e5e81"/>
+                android:background="#c31b676c"/>
 
         </LinearLayout>
     </RelativeLayout>
